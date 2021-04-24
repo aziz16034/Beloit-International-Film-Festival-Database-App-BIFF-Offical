@@ -1,0 +1,52 @@
+{% load crispy_forms_tags %}
+<img class="mb-4" src="https://beloitfilmfest.org/wp-content/uploads/2016/12/BIFF-official-selection-black.png" alt="" width="200" height="200">
+
+{% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://beloitfilmfest.org/wp-content/uploads/2016/12/BIFF-official-selection-black.png">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="C:\Users\aziz1\Desktop\css\biffff.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form method="post" class="form-group">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+    </form>
+    <p> Dont Have an Acccount? Creat One<a href="/register"> here</p>
+  </body>
+</html>

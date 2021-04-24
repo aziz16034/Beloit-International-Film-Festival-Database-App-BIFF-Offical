@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Bootstrap Simple Login Form with Blue Background</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style>
+	body {
+		color: #fff;
+		background: #3598dc;
+		font-family: 'Roboto', sans-serif;
+        padding-top: 20px;
+	}
+    .menu-container{
+		height: 550px;
+		width: 900px;
+		background: #f2f2f2;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+        margin: auto;
+		border: none;
+	}
+	.center {
+ 		 height: 200px;
+  		 position: relative;
+	}
+	.heading {
+		padding: 40px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 30px;
+		color:black;
+  		position: center;
+		margin-top: auto;
+	}
+	.btn-group button {
+		background-color:#f2f2f2;
+		border: 1px solid #f2f2f2;
+		color: rgb(7, 0, 0);
+		padding: 10px 24px; /* Some padding */
+		cursor: pointer; /* Pointer/hand icon */
+		float: left; /* Float the buttons side by side */
+		margin: auto;
+}
+
+		/* Clear floats (clearfix hack) */
+	.btn-group:after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	.btn-group button:not(:last-child) {
+  		border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e518e;
+}
+</style>
+
+</head>
+<body>
+<div class="menu-container">
+	<div class = "heading">
+	<center>
+		<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+			<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+		  </svg>
+		Home
+		<br><br>
+	</center>
+	</div>
+	<center>
+		<div class="btn-group" >
+			<center>   
+				<a href="#"></a><button><img src="https://img.icons8.com/ios/100/000000/database-restore.png"/> <a href="www.google.com.pk"> Database</a></button>
+				<button><img src="https://img.icons8.com/ios/100/000000/visualization-skill.png"/> Data Visualization </button>
+				<button><img src="https://img.icons8.com/ios/100/000000/about.png"/> About Us </button>
+			</center>
+		</div>
+		<div class="btn-group">
+			<center>
+				<button><img src="https://img.icons8.com/ios/100/000000/add-contact-to-company.png"/> Contact Us </button>
+				<button><img src="https://img.icons8.com/ios/100/000000/export.png"/> <a class "ml-2" href ="login">Log Out</a> </button>
+			</center>
+		</div>
+	</center>
+</div>
+</body>
+{% endblock %}
+
+</html>
