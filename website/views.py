@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse, render
+from django.shortcuts import render, HttpResponse, render, redirect
 from django.template import loader
+from .forms import RegisterForm
 
 
 # Create your views here.
@@ -16,8 +17,6 @@ def login (request):
     return render(request, 'login.html')
 
 
-def signup (request):
-    return render(request, 'signup.html')
 
 def about (request):
     return render(request, 'about.html')
@@ -25,5 +24,29 @@ def about (request):
 def contact (request):
     return render(request, 'contact.html')
 
-def logout (request):
+def signout (request):
     return render(request, 'logout.html')
+
+
+def signup (response):
+
+    if response.method =="POST":
+        form = RegisterForm(response.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect('home')
+    
+
+
+    else:
+        form = RegisterForm()
+
+    return render(response, 'signup.html', {"form": form})
+
+
+
+def profile(request):
+    
+    return render(request, 'profile.html')
+
