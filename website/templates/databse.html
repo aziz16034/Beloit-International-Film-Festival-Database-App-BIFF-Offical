@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Bootstrap Simple Login Form with Blue Background</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".default_option").click(function(){
+			  $(".dropdown ul").addClass("active");
+			});
+
+			$(".dropdown ul li").click(function(){
+			  var text = $(this).text();
+			  $(".default_option").text(text);
+			  $(".dropdown ul").removeClass("active");
+			});
+		});
+	</script>
+<style>
+	body {
+		color: #fff;
+		background: #3598dc;
+		font-family: 'Roboto', sans-serif;
+        padding-top: 20px;
+	}
+    .menu-container{
+		height: 700px;
+		width: 900px;
+		background: #f2f2f2;
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+        margin: auto;
+		border: none;
+	}
+	.center {
+ 		 height: 200px;
+  		 position: relative;
+	}
+	.heading {
+		padding: 40px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 30px;
+		color:black;
+  		position: absolute;
+		margin-top: auto;
+    }
+    .search-results {
+        height: 400px;
+        width: 900px;
+        margin-bottom: auto;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: black;
+    }
+</style>
+
+</head>
+<body>
+<div class="menu-container">
+     <div class = "heading">
+        <center>
+            <img src="https://img.icons8.com/ios/100/000000/database-restore.png" width="25" height="25"/> 
+            Database
+            
+        </center>
+    </div>
+        <div class="wrapper">
+        <div class="search_box">
+            <div class="dropdown">
+                <div class="default_option">All</div>  
+                <ul>
+                <li>All</li>
+                <li>Title Only</li>
+                <li>Genre Only</li>
+                <li>Country of Origin Only</li>
+                <li>Language Only</li>
+                <li>Subtitles Only</li>
+                <li>Director Name Only</li>
+                <li>Producer Name Only</li>
+                </ul>
+            </div>
+            <div class="search_field">
+            <input type="text" class="input" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        </div>
+     </div>
+     <div class= "search-results">
+         <br>
+       <h5>Results: </h5>
+     </div>
+
+</div>
+
+</body>
+{% endblock %}
+
+</html>
