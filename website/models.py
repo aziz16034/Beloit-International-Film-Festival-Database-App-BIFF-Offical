@@ -5,11 +5,46 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Post(models.Model):
-    title = models.CharField(max_length=100)
-    date_posted = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    Title= models.CharField(max_length=100000, default="")
+    Synopsis= models.CharField(max_length=100000, default="")
+    Judging= models.CharField(max_length=100000, default='SOME STRING')
+    Title_in_Original_Language= models.CharField(max_length=100000, default='SOME STRING')
+    Year_Submitted= models.CharField(max_length=100000, default='SOME STRING')
+    Duration= models.CharField(max_length=100000,  default='SOME STRING')
+    Category= models.CharField(max_length=100000, default='SOME STRING')
+    Language= models.CharField(max_length=100000, default="")
+    Genre= models.CharField(max_length=100000, default="")
+    Subtitles= models.CharField(max_length=100000, default="")
+    Student_Project= models.CharField(max_length=100000, default="")
+    Completion_Date= models.CharField(max_length=100000, default="")
+    Submission_Name= models.CharField(max_length=100000, default="")
+    Submission_email= models.CharField(max_length=100000, default="")
+   	# Submission_Phone= models.CharField(max_length=100000, default="")
+    Submission_City= models.CharField(max_length=100000, default="")
+    Director_first_name= models.CharField(max_length=100000, default="")
+    Director_email= models.CharField(max_length=100000, default="")
+    Director_phone= models.CharField(max_length=100000, default="")
+    Producer_first_name= models.CharField(max_length=100000, default="") 
+    Producer_email= models.CharField(max_length=100000, default="")
+	# Producer_Phone= models.CharField(max_length=100000, default="")
+    Distributor_name= models.CharField(max_length=100000, default="")
+    Distributor_phone= models.CharField(max_length=100000, default="")
+    Distributor_email= models.CharField(max_length=100000, default="")
+    Key_cast= models.CharField(max_length=100000, default="")
+    Screenwriters= models.CharField(max_length=100000, default="")
+    Composer_name= models.CharField(max_length=100000, default="")
+    Cinematographer_name= models.CharField(max_length=100000, default="") 
+    Rating= models.CharField(max_length=100000, default="")
+    Production_budget= models.CharField(max_length=100000, default="")
+    First_time_filmmakers= models.CharField(max_length=100000, default="")
+    Physical_copy= models.CharField(max_length=100000, default="")
+    Submission_Phone= models.CharField(max_length=100000, default="")
+    Producer_Phone= models.CharField(max_length=100000, default="")
+
+
+
+
 
     def __str__(self):
-        return self.title
-
+        return self.Title
 

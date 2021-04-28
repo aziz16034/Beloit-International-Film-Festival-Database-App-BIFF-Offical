@@ -38,8 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     "crispy_forms",
+    'import_export',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_excel_fixture',
+
 ]
 
 MIDDLEWARE = [
@@ -130,3 +133,13 @@ CRISPY_TEMPLATE_PACK="bootstrap4"
 
 
 LOGIN_REDIRECT_URL = "home/"
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+FILE_UPLOAD_HANDLERS = ("django_excel.ExcelMemoryFileUploadHandler",
+                        "django_excel.TemporaryExcelFileUploadHandler")
+
+
+
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
