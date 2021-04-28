@@ -1,17 +1,18 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.forms import DateField, CharField, ChoiceField, TextInput
 
 # Create your models here.
 
 class Post(models.Model):
     Title= models.CharField(max_length=100000, default="")
     Synopsis= models.CharField(max_length=100000, default="")
-    Judging= models.CharField(max_length=100000, default='SOME STRING')
-    Title_in_Original_Language= models.CharField(max_length=100000, default='SOME STRING')
-    Year_Submitted= models.CharField(max_length=100000, default='SOME STRING')
-    Duration= models.CharField(max_length=100000,  default='SOME STRING')
-    Category= models.CharField(max_length=100000, default='SOME STRING')
+    Judging= models.CharField(max_length=100000, default='-')
+    Title_in_Original_Language= models.CharField(max_length=100000, default='-')
+    Year_Submitted= models.CharField(max_length=100000, default='-')
+    Duration= models.CharField(max_length=100000,  default='-')
+    Category= models.CharField(max_length=100000, default='-')
     Language= models.CharField(max_length=100000, default="")
     Genre= models.CharField(max_length=100000, default="")
     Subtitles= models.CharField(max_length=100000, default="")
@@ -47,4 +48,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.Title
+
+
 

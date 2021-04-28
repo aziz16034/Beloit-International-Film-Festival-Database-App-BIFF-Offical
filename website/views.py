@@ -2,7 +2,6 @@ from django.shortcuts import render, HttpResponse, render, redirect
 from django.template import loader
 from .forms import RegisterForm
 from .models import Post
-from .resources import DataSheet
 from django.contrib import messages
 from tablib import Dataset
 import django_excel as excel
