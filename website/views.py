@@ -32,6 +32,9 @@ def contact (request):
 def signout (request):
     return render(request, 'logout.html')
 
+def database (request):
+    return render(request, 'database.html')
+
 
 def signup (response):
 
@@ -41,7 +44,7 @@ def signup (response):
             form.save()
 
         return redirect('home')
-    
+
 
 
     else:
@@ -52,7 +55,6 @@ def signup (response):
 
 
 def profile(request):
-    
     return render(request, 'profile.html')
 
 
@@ -75,8 +77,7 @@ def profile(request):
 #         		 data[2],
 #         		 data[3]
 #         		)
-#         	value.save()       
-        
+#         	value.save()
 #         #result = person_resource.import_data(dataset, dry_run=True)  # Test the data import
 
 #         #if not result.has_errors():
@@ -111,5 +112,4 @@ def profile(request):
 
 
 def database(request):
-    
     return render(request, 'database.html')
