@@ -3,9 +3,6 @@ from django.template import loader
 from .forms import RegisterForm
 from .models import Post
 from django.contrib import messages
-from tablib import Dataset
-import django_excel as excel
-
 
 
 # Create your views here.
@@ -110,6 +107,12 @@ def profile(request):
 
 
 
+
+
 def database(request):
+
+    # context ={
+    #      'posts' : Post.objects.all()
+    # }
     
     return render(request, 'database.html')
