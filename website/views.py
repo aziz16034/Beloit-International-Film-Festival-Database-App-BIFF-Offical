@@ -1,8 +1,9 @@
-from django.shortcuts import render, HttpResponse, render, redirect
+from django.shortcuts import render, HttpResponse, redirect
 from django.template import loader
 from .forms import RegisterForm
 from .models import Post
 from django.contrib import messages
+from .filters import orderfilter
 
 
 # Create your views here.
@@ -11,6 +12,7 @@ from django.contrib import messages
 
 
 def home (request):
+
     return render(request, 'home.html')
 
 
@@ -21,7 +23,7 @@ def login (request):
 
 
 def about (request):
-    return render(request, 'about.html')
+    return render(request, 'About.html')
 
 def contact (request):
     return render(request, 'contact.html')
@@ -53,6 +55,21 @@ def signup (response):
 
 def profile(request):
     return render(request, 'profile.html')
+
+
+def database(request):
+
+    
+   data = Post.objects.all() 
+   myfilter = orderfilter(request.GET, queryset=data)
+
+   data = myfilter.qs
+   context = { "student_number": data, 'myfilter': myfilter} 
+   return render(request, "database.html", context)
+
+
+
+
 
 
 
@@ -110,13 +127,6 @@ def profile(request):
 
 
 
-def database(request):
-<<<<<<< HEAD
-
-    # context ={
-    #      'posts' : Post.objects.all()
-    # }
     
-=======
->>>>>>> 3f36b12592b19c53db168bdb02ad5a42b3d0d8d6
-    return render(request, 'database.html')
+    
+

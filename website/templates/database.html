@@ -1,226 +1,96 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>Bootstrap Simple Login Form with Blue Background</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$(".default_option").click(function(){
-			  $(".dropdown ul").addClass("active");
-			});
-
-			$(".dropdown ul li").click(function(){
-			  var text = $(this).text();
-			  $(".default_option").text(text);
-			  $(".dropdown ul").removeClass("active");
-			});
-		});
-	</script>
 <style>
-	body {
-		color: #fff;
-		background: #3598dc;
-		font-family: 'Roboto', sans-serif;
-        padding-top: 20px;
-	}
-    .menu-container{
-		height: 700px;
-		width: 900px;
-		background: #f2f2f2;
-		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
-        margin: auto;
-		border: none;
-	}
-	.center {
- 		 height: 200px;
-  		 position: relative;
-	}
-	.heading {
-		padding: 40px;
-		font-family: 'Roboto', sans-serif;
-		font-size: 30px;
-		color:black;
-  		position: absolute;
-		margin-top: auto;
-    }
-    .search-results {
-        height: 400px;
-        width: 900px;
-        margin-bottom: auto;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-        color: black;
-    }
-    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-*{
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
-  outline: none;
-  list-style: none;
-  font-family: 'Montserrat', sans-serif;
 }
 
-body{
-  background: #e4eefa;
-}
-
-.wrapper{
-  position: absolute;
-  margin-top: auto;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.wrapper .search_box{
-  width: 550px;
-  background: #fff;
-  border-radius: 5px;
-  height: 70px;
-  display: flex;
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
   padding: 10px;
-  box-shadow: 0 8px 6px -10px #b3c6ff;
 }
 
-.wrapper .search_box .dropdown{
-  width: 150px;
-  border-right: 2px solid #dde2f1;
-  color: #9fa3b1;
-  position: relative;
-  cursor: pointer;
-}
-
-.wrapper .search_box .dropdown .default_option{
-  text-transform: uppercase;
-  padding: 13px 15px;
-  font-size: 14px;
-}
-
-.wrapper .search_box .dropdown ul{
-  position: absolute;
-  top: 70px;
-  left: -10px;
-  background: #fff;
-  width: 150px;
-  border-radius: 5px;
-  padding: 20px;
-  display: none;
-  box-shadow: 8px 8px 6px -10px #b3c6ff;
-}
-
-.wrapper .search_box .dropdown ul.active{
-  display: block;
-}
-
-.wrapper .search_box .dropdown ul li{
-  padding-bottom: 20px;
-}
-
-.wrapper .search_box .dropdown ul li:last-child{
-  padding-bottom: 0;
-}
-
-.wrapper .search_box .dropdown ul li:hover{
-  color: #6f768d;
-}
-
-.wrapper .search_box .dropdown:before{
+/* Clear floats after the columns */
+.row:after {
   content: "";
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  border: 8px solid;
-  border-color: #5078ef transparent transparent transparent;
-}
-
-.wrapper .search_box .search_field{
-  width: 350px;
-  height: 100%;
-  position: relative;
-}
-
-.wrapper .search_box .search_field .input{
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  font-size: 16px;
-  padding-left: 20px;
-  padding-right: 38px;
-  color: #6f768d;
-}
-
-.wrapper .search_box .search_field .fas{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 22px;
-  color: #5078ef;
-  cursor: pointer;
-}
-
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #9fa3b1;
-}
-::-moz-placeholder { /* Firefox 19+ */
- color: #9fa3b1;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #9fa3b1;
+  display: table;
+  clear: both;
 }
 </style>
-
 </head>
 <body>
-<div class="menu-container">
-     <div class = "heading">
-        <center>
-            <img src="https://img.icons8.com/ios/100/000000/database-restore.png" width="25" height="25"/> 
-            Database
-        </center>
+<div class="row">
+    <div class="card card-body">
+        <form method ="get">
+            {{myfilter.form}}
+            <button class="btn btm-primary" type ="submit">
+                Search
+            </button>
+        </form>
     </div>
-        <div class="wrapper">
-        <div class="search_box">
-            <div class="dropdown">
-                <div class="default_option">All</div>  
-                <ul>
-                <li>All</li>
-                <li>Title Only</li>
-                <li>Genre Only</li>
-                <li>Country of Origin Only</li>
-                <li>Language Only</li>
-                <li>Subtitles Only</li>
-                <li>Director Name Only</li>
-                <li>Producer Name Only</li>
-                </ul>
-            </div>
-            <div class="search_field">
-            <input type="text" class="input" placeholder="Search">
-            <i class="fas fa-search"></i>
-        </div>
-        </div>
-     </div>
-     <div class= "search-results">
-         <br>
-       <h5>Results: </h5>
-     </div>
+</div>    
+<h2>Two Equal Columns</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>
+        
+
+<ul>
+    {% for student in student_number %}  
+    <li>{{ student.Title }}</li>
+    {% endfor %}
+  </ul>
+</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>
+        <ul>
+            {% for student in student_number %}  
+            <li>{{ student.Rating }}</li>
+            {% endfor %}
+          </ul></p>
+  </div>
+
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 3</h2>
+    <p>
+        <ul>
+            {% for student in student_number %}  
+            <li>{{ student.Judging }}</li>
+            {% endfor %}
+          </ul></p>
+  </div>
+
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 4</h2>
+    <p>
+        <ul>
+            {% for student in student_number %}  
+            <li>{{ student.Year_Submitted }}</li>
+            {% endfor %}
+          </ul></p>
+  </div>
+
+
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 5</h2>
+    <p>
+        <ul>
+            {% for student in student_number %}  
+            <li>{{ student.Title_in_Original_Language }}</li>
+            {% endfor %}
+          </ul></p>
+  </div>
+
 
 </div>
 
 </body>
-
-
 </html>

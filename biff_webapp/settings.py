@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     "crispy_forms",
     'import_export',
     'chartjs',
-    'pylint-django',
     'rest_framework',
+    'django_filters',
     'django_admin_search',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -147,3 +147,5 @@ FILE_UPLOAD_HANDLERS = ("django_excel.ExcelMemoryFileUploadHandler",
 
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
+
+
