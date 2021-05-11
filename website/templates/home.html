@@ -1,99 +1,111 @@
-{% extends "base.html" %}
-{% block content %}
+
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-<title>Bootstrap Simple Login Form with Blue Background</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-<style>
-	body {
-		color: #fff;
-		background: #3598dc;
-		font-family: 'Roboto', sans-serif;
-        padding-top: 20px;
-	}
-    .menu-container{zsx
-		height: 550px;
-		width: 900px;
-		background: #f2f2f2;
-		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
-        margin: auto;
-		border: none;
-	}
-	.center {
- 		 height: 200px;
-  		 position: relative;
-	}
-	.heading {
-		padding: 40px;
-		font-family: 'Roboto', sans-serif;
-		font-size: 30px;
-		color:black;
-  		position: center;
-		margin-top: auto;
-	}
-	.btn-group button {
-		background-color:#f2f2f2;
-		border: 1px solid #f2f2f2;
-		color: rgb(7, 0, 0);
-		padding: 10px 24px; /* Some padding */
-		cursor: pointer; /* Pointer/hand icon */
-		float: left; /* Float the buttons side by side */
-		margin: auto;
-}
-
-		/* Clear floats (clearfix hack) */
-	.btn-group:after {
-		content: "";
-		clear: both;
-		display: table;
-	}
-
-	.btn-group button:not(:last-child) {
-  		border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e518e;
-}
-</style>
-
-</head>
-<body>
-<div class="menu-container">
-	<div class = "heading">
-	<center>
-		<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-			<path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-		  </svg>
-		Home
-		<br><br>
-	</center>
-	</div>
-	<center>
-		<div class="btn-group" >
-			<center>   
-				<a href="{% url 'database' %}"><button><img src="https://img.icons8.com/ios/100/000000/database-restore.png"/> Database </button> </a>
-				<button><img src="https://img.icons8.com/ios/100/000000/visualization-skill.png"/> Data Visualization </button>
-			<a href="about.html"><button><img src="https://img.icons8.com/ios/100/000000/about.png"/> About Us </button></a>
-			</center>
-		</div>
-		<div class="btn-group">
-			<center>
-				<a href="contact.html"><button><img src="https://img.icons8.com/ios/100/000000/add-contact-to-company.png"/> Contact Us </button> </a>
-				<a href="loggut.html"><button><img src="https://img.icons8.com/ios/100/000000/export.png"/> <a class "ml-2" href ="login">Log Out</a> </button> </a>
-			</center>
-		</div>
-	</center>
-</div>
-</body>
-{% endblock %}
-
+<html style="font-size: 16px;">
+  <head>
+    <link rel="stylesheet"  type="text/css" href="{% static 'website/Home.css' %}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'website/nicepage.css' %}" >
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Home</title>
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.13.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"url": "index.html",
+		"logo": "images/page1-1200px-Beloit_International_Film_Festival_Logo.pdf.jpg"
+}</script>
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-53f1"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="1054">
+          <img src="images/page1-1200px-Beloit_International_Film_Festival_Logo.pdf.jpg" class="u-logo-image u-logo-image-1" data-image-width="164">
+        </a>
+        <nav data-position="" class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse">
+            <a class="u-button-style u-nav-link" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-nav-container">
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Database.html">Database</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data-Visualization.html">Data Visualization</a>
+</li></ul>
+          </div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Database.html">Database</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data-Visualization.html">Data Visualization</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-palette-1-base u-section-1" id="sec-1251">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <h3 class="u-align-center u-text u-text-1">Database</h3>
+                <h3 class="u-text u-text-2">Data Visualization</h3>
+                <img src="images/database-restore.png" alt="" class="u-image u-image-default u-preserve-proportions u-image-1" data-image-width="100" data-image-height="100">
+                <h6 class="u-align-center u-text u-text-3">Search through BIFF's database to find the films you are looking for</h6>
+                <a href="Database.html" data-page-id="250126646" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-1">Enter<br>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="images/visualization-skill.png" alt="" class="u-image u-image-default u-preserve-proportions u-image-2" data-image-width="100" data-image-height="100">
+        <h6 class="u-align-center u-text u-text-4">Interested on how diverse the library is? Use this tool to visualize our database</h6>
+        <a href="Data-Visualization.html" data-page-id="79654341" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-2">Enter</a>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-d649"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Created by Abdul Aziz, Christiane Umutoni, and Ericka Corral<br>Created for Database Capstone Class at Beloit College
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  </body>
 </html>

@@ -70,7 +70,8 @@ def database(request):
 
 
 
-
+def dashboard(request):
+    return render(request, 'dashboard.html')
 
 
 
@@ -128,5 +129,7 @@ def database(request):
 
 
     
+def hhh(request):
+    return render(request, 'home.html')
     
 
