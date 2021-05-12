@@ -57,7 +57,7 @@ def profile(request):
     return render(request, 'profile.html')
 
 
-def database(request):
+def database2(request):
 
     
    data = Post.objects.all() 
@@ -65,7 +65,7 @@ def database(request):
 
    data = myfilter.qs
    context = { "student_number": data, 'myfilter': myfilter} 
-   return render(request, "database.html", context)
+   return render(request, "Database2.html", context)
 
 
 
@@ -128,8 +128,5 @@ def dashboard(request):
 
 
 
-    
-def hhh(request):
-    return render(request, 'home.html')
     
 

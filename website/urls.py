@@ -19,6 +19,8 @@ from django.conf.urls.static import static
 from django.conf import settings
 from . import views
 from django.contrib.auth import views as auth_views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     path('home/', views.home, name='home'),
@@ -31,9 +33,8 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('database/',views.database,name='database'),
     path('', include("django.contrib.auth.urls")),
-    path('database/', views.database, name='database'),
+    path('database2/', views.database2, name='database2'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('hhh/', views.hhh, name='hhh'),
 
 
 

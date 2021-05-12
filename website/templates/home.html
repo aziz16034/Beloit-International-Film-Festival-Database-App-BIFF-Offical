@@ -1,11 +1,10 @@
-
 {% load static %}
-
 <!DOCTYPE html>
+
 <html style="font-size: 16px;">
   <head>
-    <link rel="stylesheet"  type="text/css" href="{% static 'static\admin\css\Home.css' %}"/>
-    <link rel="stylesheet"  type="text/css" href="{% static 'nicepage.css' %}" >
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/Home.css' %}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/nicepage.css' %}" >
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -13,8 +12,8 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 3.13.2, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
@@ -34,7 +33,7 @@
   </head>
   <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-53f1"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="1054">
-          <img src="images/page1-1200px-Beloit_International_Film_Festival_Logo.pdf.jpg" class="u-logo-image u-logo-image-1" data-image-width="164">
+          <img src="{% static 'images/page1-1200px-Beloit_International_Film_Festival_Logo.pdf.jpg' %}" class="u-logo-image u-logo-image-1" data-image-width="164">
         </a>
         <nav data-position="" class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse">
@@ -47,7 +46,7 @@
           </div>
           <div class="u-nav-container">
             <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Database.html">Database</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data-Visualization.html">Data Visualization</a>
@@ -77,7 +76,7 @@
               <div class="u-container-layout u-similar-container u-container-layout-1">
                 <h3 class="u-align-center u-text u-text-1">Database</h3>
                 <h3 class="u-text u-text-2">Data Visualization</h3>
-                <img src="images/database-restore.png" alt="" class="u-image u-image-default u-preserve-proportions u-image-1" data-image-width="100" data-image-height="100">
+                <img src="{% static 'images/database-restore.png' %}" alt="" class="u-image u-image-default u-preserve-proportions u-image-1" data-image-width="100" data-image-height="100">
                 <h6 class="u-align-center u-text u-text-3">Search through BIFF's database to find the films you are looking for</h6>
                 <a href="Database.html" data-page-id="250126646" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-1">Enter<br>
                 </a>
@@ -85,7 +84,7 @@
             </div>
           </div>
         </div>
-        <img src="images/visualization-skill.png" alt="" class="u-image u-image-default u-preserve-proportions u-image-2" data-image-width="100" data-image-height="100">
+        <img src="{% static 'images/visualization-skill.png' %}" alt="" class="u-image u-image-default u-preserve-proportions u-image-2" data-image-width="100" data-image-height="100">
         <h6 class="u-align-center u-text u-text-4">Interested on how diverse the library is? Use this tool to visualize our database</h6>
         <a href="Data-Visualization.html" data-page-id="79654341" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-2">Enter</a>
       </div>
