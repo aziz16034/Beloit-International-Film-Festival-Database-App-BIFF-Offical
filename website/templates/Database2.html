@@ -11,7 +11,7 @@
     <title>Database</title>
     <link rel="stylesheet"  type="text/css" href="{% static 'css/Database.css' %}"/>
     <link rel="stylesheet"  type="text/css" href="{% static 'css/nicepage.css' %}" >
-    
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/table.css'%}"/>
     <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
     <meta name="generator" content="Nicepage 3.13.2, nicepage.com">
@@ -85,59 +85,42 @@
                   </button>
               </form>
           </div>
-      </div>    
-
-
-
+      </div>
         <h4 class="u-text u-text-default u-text-1">Results:</h4>
-        <div class="u-expanded-width u-table u-table-responsive u-table-1">
-          <table class="u-table-entity u-table-entity-1">
-            <colgroup>
-              <col width="25%">
-              <col width="27%">
-              <col width="23%">
-              <col width="25%">
-            </colgroup>
-            <h2>test</h2>
-            <tbody class="u-table-alt-palette-1-light-3 u-table-body">
-              <tr style="height: 55px;">
-                <td class="u-table-cell">Title</td>
-                <td class="u-table-cell">Rating</td>
-                <td class="u-table-cell">Judging</td>
-                <td class="u-table-cell">Year Submitted</td>
-                <td class="u-table-cell">Original Language</td>
-              </tr>
-              <tr style="height: 70px;">
-                <td class="u-table-cell"> 
-                  {% for student in student_number %}  
-                  <li>{{ student.Title }}</li>
+        <center>
+          <table class = "styled-table"> 
+            <thead>
+               <tr>
+                 <th>
+                   Title
+                 </th>
+                 <th>
+                   Rating
+                 </th>
+                 <th>
+                   Judging
+                 </th>
+                 <th>
+                   Year Submitted
+                 </th>
+                 <th>
+                   Original Language
+                 </th>
+               </tr>
+            </thead>
+            <tbody>
+                  {%for student in student_number%}
+                  <tr>
+                  <td>{{student.Title}}</td>
+                  <td>{{student.Rating}}</td>
+                  <td>{{student.Judging}}</td>
+                  <td>{{student.Year_Submitted}}</td>
+                  <td>{{student.Title_in_Original_Language}}</td>
+                  </tr>
                   {% endfor %}
-                </td>
-                <td class="u-table-cell">
-                  <ul>
-                    {% for student in student_number %}  
-                    <li>{{ student.Rating }}</li>
-                    {% endfor %}
-                  </ul>
-                </td>
-                <td class="u-table-cell">
-                  {% for student in student_number %}  
-                  <li>{{ student.Judging }}</li>
-                  {% endfor %}
-                </td>
-                <td class="u-table-cell">
-                  {% for student in student_number %}  
-                  <li>{{ student.Year_Submitted }}</li>
-                  {% endfor %}
-                </td>
-                <td class="u-table-cell">
-                  {% for student in student_number %}  
-                  <li>{{ student.Title_in_Original_Language }}</li>
-                  {% endfor %}
-              </td>
-              </tr>
             </tbody>
           </table>
+        </center>
         </div>
       </div>
     </section>

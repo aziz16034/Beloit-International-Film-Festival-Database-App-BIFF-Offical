@@ -65,6 +65,8 @@ def database2(request):
 
    data = myfilter.qs
    context = { "student_number": data, 'myfilter': myfilter} 
+
+   
    return render(request, "Database2.html", context)
 
 
