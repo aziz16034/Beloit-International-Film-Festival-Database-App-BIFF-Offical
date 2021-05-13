@@ -17,16 +17,39 @@ def home (request):
 
 
 
-def login (request):
-    return render(request, 'login.html')
+# def login (request):
+#     used_method = str(request.method)
 
+#     return render(request, 'Log-In.html', {'test': used_method})
+#         # return render(request, 'Log-In.html', {'test': used_method})
+
+# def login(request, method='POST'):
+#     '''Shows a login form and a registration link.'''
+
+#     if request.method == 'POST':
+#         username = request.POST.get('username', '')
+#         password = request.POST.get('password', '')
+#         user = auth.authenticate(username=username, password=password)
+
+#         if user is not None and user.is_active:
+#             auth.login(request, user)
+#             return HttpResponseRedirect("/home")
+
+#         else:
+#             return HttpResponse("Invalid login. Please try again.")
+
+#     # if not POST then return login form    
+#     return render(request, "Log-In.html", {'next':'/home'})
+
+def login (request):
+    return render(request, 'Log-In.html')
 
 
 def about (request):
     return render(request, 'About.html')
 
 def contact (request):
-    return render(request, 'contact.html')
+    return render(request, 'Contact.html')
 
 def signout (request):
     return render(request, 'logout.html')
@@ -49,7 +72,7 @@ def signup (response):
     else:
         form = RegisterForm()
 
-    return render(response, 'signup.html', {"form": form})
+    return render(response, 'Sign-Up.html', {"form": form})
 
 
 

@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'users',
     'website.apps.WebsiteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -141,7 +140,7 @@ STATICFILES_DIRS = [
 CRISPY_TEMPLATE_PACK="bootstrap4"
 
 
-LOGIN_REDIRECT_URL = "home/"
+LOGIN_REDIRECT_URL = 'home'
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
 

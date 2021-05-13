@@ -24,13 +24,15 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('home/', views.home, name='home'),
-    path('', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('', auth_views.LoginView.as_view(template_name='Log-In.html'), name='login'),
+    # path('', views.login, name='login'),
+
     path('signout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='signout'),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    # path('login/', auth_views.LoginView.as_view(template_name='Login-In.html'), name='login'),
     path('profile/', views.profile, name='profile'),
     path('signup/', views.signup, name='signup'),
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
+    path('home/about/', views.about, name='about'),
+    path('home/contact/', views.contact, name='contact'),
     path('database/',views.database,name='database'),
     path('', include("django.contrib.auth.urls")),
     path('database2/', views.database2, name='database2'),
