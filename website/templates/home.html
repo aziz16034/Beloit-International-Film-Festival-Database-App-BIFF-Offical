@@ -49,7 +49,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'contact' %}">Contact</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'database2' %}">Database</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data-Visualization.html">Data Visualization</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'dashboard' %}">Data Visualization</a>
 </li></ul>
           </div>
           <div class="u-nav-container-collapse">
@@ -78,7 +78,7 @@
                 <h3 class="u-text u-text-2">Data Visualization</h3>
                 <img src="{% static 'images/database-restore.png' %}" alt="" class="u-image u-image-default u-preserve-proportions u-image-1" data-image-width="100" data-image-height="100">
                 <h6 class="u-align-center u-text u-text-3">Search through BIFF's database to find the films you are looking for</h6>
-                <a href="Database.html" data-page-id="250126646" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-1">Enter<br>
+                <a href="{% url 'database2' %}" data-page-id="250126646" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-1">Enter<br>
                 </a>
               </div>
             </div>
@@ -86,7 +86,7 @@
         </div>
         <img src="{% static 'images/visualization-skill.png' %}" alt="" class="u-image u-image-default u-preserve-proportions u-image-2" data-image-width="100" data-image-height="100">
         <h6 class="u-align-center u-text u-text-4">Interested on how diverse the library is? Use this tool to visualize our database</h6>
-        <a href="Data-Visualization.html" data-page-id="79654341" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-2">Enter</a>
+        <a href="{% url 'dashboard' %}" data-page-id="79654341" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-radius-50 u-white u-btn-2">Enter</a>
       </div>
     </section>
     
