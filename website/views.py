@@ -6,6 +6,7 @@ from django.contrib import messages
 from .filters import orderfilter
 
 
+
 # Create your views here.
 
 
@@ -85,6 +86,7 @@ def database2(request):
     
    data = Post.objects.all() 
    myfilter = orderfilter(request.GET, queryset=data)
+
 
    data = myfilter.qs
    context = { "student_number": data, 'myfilter': myfilter} 

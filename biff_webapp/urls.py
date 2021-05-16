@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from website import urls, views
-
+admin.site.site_header="Beloit International Film Festival Admin Page"
+admin.site.site_title ="BIFF"
+admin.site.index_title="Staff Administration"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
