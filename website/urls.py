@@ -36,6 +36,7 @@ urlpatterns = [
     path('database/',views.database,name='database'),
     path('', include("django.contrib.auth.urls")),
     path('database2/', views.database2, name='database2'),
+    path('<int:id>', views.detail, name='detail'),
     path('dashboard/', views.dashboard, name='dashboard'),
 
 

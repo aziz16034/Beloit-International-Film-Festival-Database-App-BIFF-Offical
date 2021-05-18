@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.forms import DateField, CharField, ChoiceField, TextInput
+from django.urls import reverse   
+
 
 # Create your models here.
 
@@ -48,6 +50,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.Title
+
+    def get_absolute_url(self):       
+         return reverse('detail', args=[str(self.id)])
 
 
 

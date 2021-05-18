@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.template import loader
 from .forms import RegisterForm
 from .models import Post
@@ -96,6 +96,22 @@ def database2(request):
 
 
 
+
+# def detail(request, id):
+    
+ 
+
+#     obj= get_object_or_404(Post, pk=id)
+    
+#     context= {'obj':obj
+#               }
+    
+#     return render(request, 'Detail.html', context)
+
+def detail(request, pk):
+  return render(request, 'Detail.html', {
+    'post': get_object_or_404(Post, pk=id)
+  })
 
 def dashboard(request):
     return render(request, 'dashboard.html')

@@ -126,30 +126,31 @@
             <thead>
                <tr>
                  <th>
-                   Title
+                   Synopsis
                  </th>
                  <th>
-                   Rating
+                   Duration
                  </th>
                  <th>
-                   Judging
+                    Category
                  </th>
                  <th>
-                   Year Submitted
+                    Genre
                  </th>
                  <th>
-                   Original Language
+                    Student_Project 
                  </th>
                </tr>
             </thead>
             <tbody>
                   {%for student in student_number%}
+                  
                   <tr>
-                  <td><a href="{{ post.get_absolute_url }}">{{student.Title}}</a></td>
-                  <td>{{student.Rating}}</td>
-                  <td>{{student.Judging}}</td>
-                  <td>{{student.Year_Submitted}}</td>
-                  <td>{{student.Title_in_Original_Language}}</td>
+                  <td>{{student.Synopsis}}</td>
+                  <td>{{student.Student_Project}}</td>
+                  <td>{{student.Duration}}</td>
+                  <td>{{student.Category}}</td>
+                  <td>{{student.Genre}}</td>
                   </tr>
                   {% endfor %}
             </tbody>
