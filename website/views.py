@@ -52,7 +52,7 @@ def about (request):
 def contact (request):
     return render(request, 'Contact.html')
 
-def signout (request):
+def logout (request):
     return render(request, 'logout.html')
 
 def database (request):
