@@ -1,4 +1,113 @@
+{% load static %}
+
 <!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="INTUITIVE">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Database</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/Database.css' %}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/nicepage.css' %}" >
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/table.css'%}"/>
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.13.2, nicepage.com">
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <style>
+      .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #3d71e0;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #3d71e0;;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #98c7ec;
+}
+    </style>
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"url": "index.html",
+		"logo": "images/page1-1200px-Beloit_International_Film_Festival_Logo.pdf.jpg"
+}</script>
+    <meta property="og:title" content="Database">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-53f1"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="1200" data-image-height="1054">
+          <img src="{% static 'images/page1-1200px-Beloit_International_Film_Festival_Logo.pdf.jpg' %}" class="u-logo-image u-logo-image-1" data-image-width="164">
+        </a>
+        <nav data-position="" class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse">
+            <a class="u-button-style u-nav-link" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-nav-container">
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'contact' %}">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Admin Log In </a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'database2' %}">Database</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data-Visualization.html">Data Visualization</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'log_out' %}">Log Out</a>
+</li></ul>
+          </div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'contact' %}">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://127.0.0.1:8000/admin/login/?next=/admin/">Admin Log In </a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'database2' %}">Database</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Data-Visualization.html">Data Visualization</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'log_out' %}">Log Out</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +115,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subtitles</title>
 </head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: rgb(109, 101, 101);
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 16px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #62acf0;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
 <body>
+    <nav>
+    <div class="topnav">
+        <a class="tableauPlaceholder" href="#viz1621023341165">Countries </a> 
+        <a href="#viz1621024959648">Languages</a>
+        <a href="#viz1620788994441">Year Submitted</a>
+        <a href="#viz1621024240711">Subtitles</a>
+        <a href="#viz1621281086271">Student Project</a>
+      </div>
+    </nav>
+    
     <div class="tableauPlaceholder" id="viz1621023341165" style="position: relative">
         <noscript><a href="#"><img alt="Countries"  src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;
         Bi&#47;Biff_countriessubmitted&#47;Countries&#47;1_rss.png" style="border: none" /></a></noscript>
@@ -33,10 +182,11 @@
               scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
         vizElement.parentNode.insertBefore(scriptElement, vizElement);                
         </script>
-
+ <a href="#viz1621023341165">Back</a>
 <div class="tableauPlaceholder" id="viz1621024959648" style="position: relative">
     <noscript><a href="#"><img alt="Languages " src="https:&#47;&#47;public.tableau.com&#47;
     static&#47;images&#47;Bi&#47;Biff_Languages&#47;Languages&#47;1_rss.png' style='border: none" />
+    
     </a></noscript><object class="tableauViz"  style="display:none;">
     <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
      <param name="embed_code_version" value="3" /> 
@@ -61,6 +211,7 @@
               scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
      vizElement.parentNode.insertBefore(scriptElement, vizElement);             
         </script>
+        <a href="#viz1621023341165">Back</a>
                      <div class="tableauPlaceholder" id="viz1620788994441" style="position: relative"><noscript>
                         <a href="#"><img alt="Year Submissions " src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Biff_Year_submitted&#47;YearSubmissions&#47;1_rss.png' style='border: none" />
                         </a></noscript>
@@ -88,7 +239,31 @@
                               scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';              
                           vizElement.parentNode.insertBefore(scriptElement, vizElement);            
                               </script>
-                    
+<a href="#viz1621023341165">Back</a>
+<div class="tableauPlaceholder" id="viz1621281086271" style="position: relative"><noscript><a href="#">
+    <img alt="&lt;Student Project ?&gt; " src="https:&#47;&#47;public.tableau.com&#47;static&#47;
+    images&#47;Bi&#47;Biff_Student_Project&#47;Sheet5&#47;1_rss.png' style='border: none" /></a>
+    </noscript><object class="tableauViz" style="display:none;">
+    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" /> 
+    <param name="embed_code_version" value="3" />
+     <param name="site_root" value="" />
+    <param name="name" value="Biff_Student_Project&#47;Sheet5" />
+    <param name="tabs" value="no" />
+    <param name="toolbar" value="yes" />
+    <param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;Biff_Student_Project&#47;Sheet5&#47;1.png" /> 
+    <param name="animate_transition" value="yes" />
+    <param name="display_static_image" value="yes" />
+    <param name="display_spinner" value="yes" />
+    <param name="display_overlay" value="yes" />
+    <param name="display_count" value="yes" />
+    <param name="language" value="en" />
+    <param name="filter" value="publish=yes" /></object></div>                
+    <script type="text/javascript">                    
+var divElement = document.getElementById('viz1621281086271');                   
+ var vizElement = divElement.getElementsByTagName('object')[0];                   
+  vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);               
+ </script>
+                    <a href="#viz1621023341165">Back</a>
                     <div class="tableauPlaceholder" id="viz1621024240711" style="position: relative">
                         <noscript><a href="#"><img alt="&lt;Subtitles Or Not&gt; " src="https:&#47;&#47;public.tableau.com&#47;
                         static&#47;images&#47;Bi&#47;Biff_countriessubmitted&#47;Subtitles&#47;1_rss.png' style='border: none" /></a>
