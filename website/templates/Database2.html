@@ -149,7 +149,7 @@
             <tbody>
                   {%for student in student_number%}
                   <tr>
-                  <td><a href="{{ post.get_absolute_url }}">{{student.Title}}</a></td>
+                  <td><a href="{% url '<int:id>' %}">{{student.Title}}</a></td>
                   <td>{{student.Rating}}</td>
                   <td>{{student.Judging}}</td>
                   <td>{{student.Year_Submitted}}</td>

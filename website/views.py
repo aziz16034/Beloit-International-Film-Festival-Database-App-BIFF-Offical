@@ -148,10 +148,21 @@ def database2(request):
     
 #     return render(request, 'Detail.html', context)
 
-def detail(request, pk):
-  return render(request, 'Detail.html', {
-    'post': get_object_or_404(Post, id=pk)
-  })
+# def detail(request, pk):
+
+#     return render(request, 'Detail.html', {
+#     'post': get_object_or_404(Post, id=pk)
+#   })
+
+def detail(request, id):
+
+    post = Post.objects.all(id =id) 
+    context= {'post':post
+              }
+    return render(request, 'Detail.html', context)
+
+
+
 
 def dashboard(request):
     return render(request, 'dashboard.html')
