@@ -152,4 +152,3 @@ FILE_UPLOAD_HANDLERS = ("django_excel.ExcelMemoryFileUploadHandler",
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
-

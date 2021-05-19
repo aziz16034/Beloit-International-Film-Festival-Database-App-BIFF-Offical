@@ -1,9 +1,11 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from django.template import loader
 from .forms import RegisterForm
-from .models import Post
+from .models import Post, Contact
 from django.contrib import messages
 from .filters import orderfilter
+from django.core.mail import send_mail, BadHeaderError
+
 
 
 
@@ -49,11 +51,48 @@ def login (request):
 def about (request):
     return render(request, 'About.html')
 
-def contact (request):
+# def contact (request):
+#     return render(request, 'Contact.html')
+
+
+# def contact(request):
+#     if request.method == 'GET':
+#         form = ContactForm()
+#     else:
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             subject = form.cleaned_data['subject']
+#             from_email = form.cleaned_data['from_email']
+#             message = form.cleaned_data['message']
+#             try:
+#                 send_mail(subject, message, from_email, ['admin@example.com'])
+#             except BadHeaderError:
+#                 return HttpResponse('Invalid header found.')
+#             return redirect('success')
+#     return render(request, "Contact.html", {'form': form})
+
+# def successView(request):
+#     return HttpResponse('Success! Thank you for your message.')
+
+
+def contact(request):
+    if request.method=="POST":
+        contact =Contact()
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        subject = request.POST.get('subject')
+        contact.name =name
+        contact.email =email
+        contact.subject=subject
+        contact.save()
+        return HttpResponse("THANKS FOR CONTACTING US")
+        
     return render(request, 'Contact.html')
 
-def logout (request):
-    return render(request, 'logout.html')
+
+
+def log_out (request):
+    return render(request, 'Log-out.html')
 
 def database (request):
     return render(request, 'database.html')
@@ -110,7 +149,7 @@ def database2(request):
 
 def detail(request, pk):
   return render(request, 'Detail.html', {
-    'post': get_object_or_404(Post, pk=id)
+    'post': get_object_or_404(Post, id=pk)
   })
 
 def dashboard(request):

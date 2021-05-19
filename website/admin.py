@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import Post
+from .models import Post, Contact
 from import_export.admin import ImportExportModelAdmin
 # Register your models here.
 
@@ -16,4 +16,4 @@ class Postdata(ImportExportModelAdmin):
     fieldsets=()
 
 
-
+admin.site.register(Contact)

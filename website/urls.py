@@ -27,17 +27,19 @@ urlpatterns = [
     path('', auth_views.LoginView.as_view(template_name='Log-In.html'), name='login'),
     # path('', views.login, name='login'),
 
-    path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
+    # path('log_out/', auth_views.LogoutView.as_view(template_name='Log-out.html'), name='logout'),
     # path('login/', auth_views.LoginView.as_view(template_name='Login-In.html'), name='login'),
     path('profile/', views.profile, name='profile'),
     path('signup/', views.signup, name='signup'),
-    path('home/about/', views.about, name='about'),
-    path('home/contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact'),
     path('database/',views.database,name='database'),
     path('', include("django.contrib.auth.urls")),
     path('database2/', views.database2, name='database2'),
     path('<int:id>', views.detail, name='detail'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('log_out/', views.log_out, name='log_out'),
+
 
 
 

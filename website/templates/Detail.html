@@ -147,14 +147,14 @@
                </tr>
             </thead>
             <tbody>
-                  {%for student in student_number%}
+                  {%for x in post%}
                   
                   <tr>
-                  <td>{{student.Synopsis}}</td>
-                  <td>{{student.Student_Project}}</td>
-                  <td>{{student.Duration}}</td>
-                  <td>{{student.Category}}</td>
-                  <td>{{student.Genre}}</td>
+                  <td>{{x.Synopsis}}</td>
+                  <td>{{x.Student_Project}}</td>
+                  <td>{{x.Duration}}</td>
+                  <td>{{x.Category}}</td>
+                  <td>{{x.Genre}}</td>
                   </tr>
                   {% endfor %}
             </tbody>

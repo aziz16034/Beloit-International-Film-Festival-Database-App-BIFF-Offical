@@ -47,7 +47,6 @@ class Post(models.Model):
 
 
 
-
     def __str__(self):
         return self.Title
 
@@ -56,3 +55,11 @@ class Post(models.Model):
 
 
 
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100, null=True)
+    email = models.EmailField(null=True)
+    subject = models.TextField(null=True)
+
+    def __str__(self):
+        return self.name
