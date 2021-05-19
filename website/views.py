@@ -154,15 +154,18 @@ def database2(request):
 #     'post': get_object_or_404(Post, id=pk)
 #   })
 
-def detail(request, id):
+# def detail(request, id):
 
-    post = Post.objects.all(id =id) 
-    context= {'post':post
-              }
-    return render(request, 'Detail.html', context)
+#     post = Post.objects.all(id =id) 
+#     context= {'post':post
+#               }
+#     return render(request, 'Detail.html', context)
 
 
-
+# def post_detail(request, pk):
+#   return render(request, 'Detail.html', {
+#     'post': get_object_or_404(Post, pk=id)
+#   })
 
 def dashboard(request):
     return render(request, 'dashboard.html')

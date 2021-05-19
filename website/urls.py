@@ -36,7 +36,9 @@ urlpatterns = [
     path('database/',views.database,name='database'),
     path('', include("django.contrib.auth.urls")),
     path('database2/', views.database2, name='database2'),
-    path('<int:id>/', views.detail, name='detail'),
+    # path('<int:id>/', views.detail, name='detail'),
+    # path('', views.post_detail, name='post_detail'),
+
     path('dashboard/', views.dashboard, name='dashboard'),
     path('log_out/', views.log_out, name='log_out'),
 

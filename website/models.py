@@ -49,9 +49,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.Title
-
-    def get_absolute_url(self):       
-         return reverse('detail', args=[str(self.id)])
+    
+    
 
 
 
@@ -63,3 +62,5 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+

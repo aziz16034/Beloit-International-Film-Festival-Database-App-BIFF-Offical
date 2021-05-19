@@ -133,10 +133,10 @@
                    Title
                  </th>
                  <th>
-                   Rating
+                   Synopsis
                  </th>
                  <th>
-                   Judging
+                   Rating
                  </th>
                  <th>
                    Year Submitted
@@ -144,16 +144,29 @@
                  <th>
                    Original Language
                  </th>
+                 <th>
+                  Judging
+                </th>
+                <th>
+                  Category
+                </th>
+                <th>
+                  Student_Project               
+                </th>
                </tr>
             </thead>
             <tbody>
                   {%for student in student_number%}
                   <tr>
-                  <td><a href="{% url '<int:id>' %}">{{student.Title}}</a></td>
+                  <td>{{student.Title}}</td>
+                  <td>{{student.Synopsis}}</td>
                   <td>{{student.Rating}}</td>
-                  <td>{{student.Judging}}</td>
                   <td>{{student.Year_Submitted}}</td>
                   <td>{{student.Title_in_Original_Language}}</td>
+                  <td>{{student.Judging}}</td>
+                  <td>{{student.Category}}</td>
+                  <td>{{student.Student_Project}}</td>
+
                   </tr>
                   {% endfor %}
             </tbody>

@@ -8,6 +8,8 @@ class orderfilter(django_filters.FilterSet):
     end_date = django_filters.NumberFilter(field_name="Rating", lookup_expr='lt')
     release_year = django_filters.NumberFilter(field_name='Year_Submitted', lookup_expr='gt')
     release_yearlow = django_filters.NumberFilter(field_name='Year_Submitted', lookup_expr='lt')
+    # student_project = django_filters.CharFilter(field_name='Student_Project',  look ='Yes' l)
+
 
 
 
