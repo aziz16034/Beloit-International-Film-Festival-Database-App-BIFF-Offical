@@ -84,7 +84,8 @@ def contact(request):
         contact.name=name
         contact.email=email
         contact.subject=subject
-        # contact.save()
+        
+        contact.save()
         return HttpResponse("THANKS FOR CONTACTING US")
         
     return render(request, 'Contact.html')
